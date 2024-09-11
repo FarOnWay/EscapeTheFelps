@@ -2,13 +2,14 @@
 #define ATTACKITEM_H
 
 #include <string>
+#include "Item.h" 
 
-class AttackItem {
+class AttackItem : public Item 
+{
 public:
-    std::string name;
     int damage;
 
-    AttackItem(std::string name, int damage);
+    AttackItem(std::string name, int damage, std::string description);
 };
 
-#endif 
+#endif

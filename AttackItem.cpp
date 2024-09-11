@@ -1,6 +1,7 @@
 #include "AttackItem.h"
 
-AttackItem::AttackItem(std::string name, int damage) {
-    this->name = name;
-    this->damage = damage;
+AttackItem::AttackItem(std::string name, int damage, std::string description)
+    : Item(name, description), damage(damage) 
+{
+
 }
