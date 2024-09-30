@@ -7,8 +7,7 @@ class LifeController
         void takeDamage(int damage);
         void heal(int health);
         void die();
-
-    private:
+        
         int life;
         int maxLife;
         bool isDead;    

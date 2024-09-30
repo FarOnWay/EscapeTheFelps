@@ -1,6 +1,8 @@
 #include <iostream>
 #include "AttackItem.h"
-#include "AsciiMap.h"
+#include "Player.h"
+#include "LifeController.h"
+#include "Map.h"
 
 using namespace std;
 
@@ -17,17 +19,18 @@ if the player dies to the monsters, the game restarts from the beginning
 
 int main()
 {
-    AttackItem sword("Sword", 10);
-    std::cout << "Created an attack item: " << sword.name << " with damage: " << sword.damage << std::endl;
-    AsciiMap map('#');
-    map.printMap();
-    std::cout << "⬜️⬜️⬜️⬜️⬜️\n";
-    std::cout << "⬜️⬜️⬜️⬜️⬜️\n";
-    std::cout << "⬜️⬜️⬛️⬜️⬜️\n";
-    std::cout << "⬜️⬜️⬜️⬜️⬜️\n";
-    std::cout << "⬜️⬜️⬜️⬜️⬜️\n";
-    std::cout << "🎲🎬🌷\n";
-
+    // AttackItem sword("Sword", 10);
+    // std::cout << "Created an attack item: " << sword.name << " with damage: " << sword.damage << std::endl;
+    // Player test = Player("Test", LifeController());
+    // cout << test.name << endl;
+    // cout << test.get_health() << endl;
+    Map map = Map();
+    map.GenerateMap(10);
+    cout << map.size << endl;
+    Start();
+    Rules();
+    
+ 
     return 0;
 }
 

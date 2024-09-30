@@ -1,13 +1,14 @@
-#include "LifeController.h"
+#include "LifeController.h" 
 
-void LifeController::takeDamage(int damage)
+
+void LifeController::takeDamage(int damage) 
 {
     if (isDead) return;
 
-    life -= damage;
+    life -= damage; 
     if (life <= 0)
     {
-        life = 0;
+         life = 0; 
         die();
     }
 }
